@@ -11,18 +11,19 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading:
-          Icon(Icons.photo,color: Colors.redAccent,)
-        ,
-        actions: const [
-          Icon(Icons.photo,color: Colors.redAccent,)
-        ],
-      ),
-      body: const HomeMobile(),
-    );
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     backgroundColor: Colors.transparent,
+    //     elevation: 0,
+    //     leading:
+    //       Icon(Icons.photo,color: Colors.redAccent,)
+    //     ,
+    //     actions: const [
+    //       Icon(Icons.photo,color: Colors.redAccent,)
+    //     ],
+    //   ),
+    //   body: const HomeMobile(),
+    // );
+    return HomeMobile();
   }
 }

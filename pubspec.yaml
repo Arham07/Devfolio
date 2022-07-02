@@ -81,6 +81,7 @@ flutter:
   assets:
     - assets/
     - assets/work/
+    - assets/social/
     - assets/photos/
     - assets/services/
     - assets/projects/
@@ -100,6 +101,7 @@ flutter:
       fonts:
         - asset: fonts/poppins/Poppins-Regular.ttf
         - asset: fonts/poppins/Poppins-Light.ttf
+        - weight: 300
         - asset: fonts/poppins/Poppins-Bold.ttf
           weight: 900
         - asset: fonts/poppins/Poppins-Medium.ttf

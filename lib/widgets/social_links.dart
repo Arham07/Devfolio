@@ -24,7 +24,7 @@ class SocialLinks extends StatelessWidget {
               child: IconButton(
                 highlightColor: Colors.white54,
                 splashRadius: size.width * 0.02,
-                icon: Image.network(e.value,
+                icon: Image.asset(e.value,
                     color: Colors.black, height: size.height * 0.03),
                 iconSize: 18,
                 onPressed: () => openURL(
