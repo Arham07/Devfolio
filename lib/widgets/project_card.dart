@@ -79,68 +79,66 @@ class ProjectCardState extends State<ProjectCard> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  widget.projectIcon != null
-                      ? (width > 1135 || width < 950)
-                      ? Image.asset(
-                    widget.projectIcon!,
-                    height: height * 0.05,
-                  )
-                      : Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Image.asset(
-                        widget.projectIcon!,
-                        height: height * 0.03,
-                      ),
-                      SizedBox(
-                        width: width * 0.01,
-                      ),
-                      Text(
-                        widget.projectTitle,
-                        // style: AppText.b2b,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  )
-                      : Container(),
-                  widget.projectIconData != null
-                      ? Icon(
-                    widget.projectIconData,
-                    color: const Color(0xffC0392B),
-                    size: height * 0.1,
-                  )
-                      : Container(),
-                  (width > 1135 || width < 950)
-                      ? SizedBox(
-                    height: height * 0.02,
-                  )
-                      : const SizedBox(),
-                  (width > 1135 || width < 950)
-                      ? Text(
-                    widget.projectTitle,
-                    style: TextStyle( fontFamily: 'Poppins-Bold',
-                        fontWeight: FontWeight.bold,fontSize: 18),
-                    textAlign: TextAlign.center,
-                  )
-                      : Container(),
-                  SizedBox(
-                    height: height * 0.02,
-                  ),
-                  Text(
-                    widget.projectDescription,
-                    textAlign: TextAlign.center,
-                    style: TextStyle( fontFamily: 'Poppins-Light',
-                      height: 1.5,fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: height * 0.01,
-                  ),
-                ],
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                widget.projectIcon != null
+                    ? (width > 1135 || width < 950)
+                    ? Image.asset(
+                  widget.projectIcon!,
+                  height: height * 0.05,
+                )
+                    : Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(
+                      widget.projectIcon!,
+                      height: height * 0.03,
+                    ),
+                    SizedBox(
+                      width: width * 0.01,
+                    ),
+                    Text(
+                      widget.projectTitle,
+                      // style: AppText.b2b,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                )
+                    : Container(),
+                widget.projectIconData != null
+                    ? Icon(
+                  widget.projectIconData,
+                  color: const Color(0xffC0392B),
+                  size: height * 0.1,
+                )
+                    : Container(),
+                (width > 1135 || width < 950)
+                    ? SizedBox(
+                  height: height * 0.02,
+                )
+                    : const SizedBox(),
+                (width > 1135 || width < 950)
+                    ? Text(
+                  widget.projectTitle,
+                  style: const TextStyle( fontFamily: 'Poppins-Bold',
+                      fontWeight: FontWeight.bold,fontSize: 18),
+                  textAlign: TextAlign.center,
+                )
+                    : Container(),
+                SizedBox(
+                  height: height * 0.02,
+                ),
+                Text(
+                  widget.projectDescription,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle( fontFamily: 'Poppins-Light',
+                    height: 1.5,fontSize: 15),
+                ),
+                SizedBox(
+                  height: height * 0.01,
+                ),
+              ],
             ),
             AnimatedOpacity(
               duration: const Duration(milliseconds: 400),

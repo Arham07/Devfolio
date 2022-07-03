@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:devfolio/sections/contact/contact.dart';
 import 'package:devfolio/sections/home/home.dart';
@@ -56,12 +55,12 @@ class StaticUtils {
 }
 
 class BodyUtils {
-  static const List<Widget> views = [
+  static List<Widget> views = [
     Home(),
     About(),
     Services(),
     Portfolio(),
-Contact(),
-   Footer()
+    Contact(),
+    Footer()
   ];
 }

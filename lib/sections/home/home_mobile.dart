@@ -13,7 +13,7 @@ class HomeMobile extends StatelessWidget {
 
     return SingleChildScrollView(
       child: SizedBox(
-        height: size.height * 0.95,
+        height: size.height *1.00,
         child: Stack(
           children: [
             Positioned(
@@ -37,6 +37,7 @@ class HomeMobile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: size.height*0.04,),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [

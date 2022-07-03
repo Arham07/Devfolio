@@ -35,7 +35,7 @@ class PortfolioMobileTab extends StatelessWidget {
           ),
           options: CarouselOptions(
             height: height * 0.4,
-            autoPlay: false,
+            autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,
             autoPlayCurve: Curves.fastOutSlowIn,

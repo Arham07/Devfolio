@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
     //       Icon(Icons.photo,color: Colors.redAccent,)
     //     ],
     //   ),
-    //   body: const HomeMobile(),
+    //   widgets: const HomeMobile(),
     // );
     return HomeMobile();
   }
