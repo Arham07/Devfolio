@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:devfolio/animation/bottom_animation.dart';
 import 'package:flutter/material.dart';
 import '../../utils/contact_utils.dart';
 import '../../widgets/custom_text_heading.dart';
@@ -21,10 +22,12 @@ class ContactMobileTab extends StatelessWidget {
           itemCount: 3,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: ProjectCard(
-              projectIconData: ContactUtils.contactIcon[i],
-              projectTitle: ContactUtils.titles[i],
-              projectDescription: ContactUtils.details[i],
+            child: WidgetAnimator(
+              child: ProjectCard(
+                projectIconData: ContactUtils.contactIcon[i],
+                projectTitle: ContactUtils.titles[i],
+                projectDescription: ContactUtils.details[i],
+              ),
             ),
           ),
           options: CarouselOptions(

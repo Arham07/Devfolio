@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../constants.dart';
+import '../provider/theme/theme_provider.dart';
 
 class SocialLinks extends StatelessWidget {
   const SocialLinks({
@@ -12,6 +13,7 @@ class SocialLinks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final themeChanger = Provider.of<ThemeChanger>(context);
     return Wrap(
       runSpacing: size.width * 0.02,
       alignment: WrapAlignment.center,
@@ -25,7 +27,7 @@ class SocialLinks extends StatelessWidget {
                 highlightColor: Colors.white54,
                 splashRadius: size.width * 0.02,
                 icon: Image.asset(e.value,
-                    color: Colors.black, height: size.height * 0.03),
+                    color: themeChanger.isDark ? Colors.white : Colors.black, height: size.height * 0.03),
                 iconSize: 18,
                 onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],

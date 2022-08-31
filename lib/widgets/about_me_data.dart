@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/theme/theme_provider.dart';
 
 class AboutMeData extends StatelessWidget {
   final String data;
@@ -13,7 +16,7 @@ class AboutMeData extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-
+    final themeChanger = Provider.of<ThemeChanger>(context);
     return Align(
       alignment: alignment ?? Alignment.center,
       child: RichText(
@@ -26,7 +29,7 @@ class AboutMeData extends StatelessWidget {
             TextSpan(
               text: " $information\n",
               style: TextStyle(
-                  color: Colors.black87, fontFamily: 'Poppins', fontSize: 12),
+                  color: themeChanger.isDark? Colors.white:Colors.black87, fontFamily: 'Poppins', fontSize: 12),
             ),
           ],
         ),

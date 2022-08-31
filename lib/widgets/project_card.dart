@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../constants.dart';
+import '../provider/theme/theme_provider.dart';
+import 'package:devfolio/provider/theme/core_theme.dart' as theme;
 
 class ProjectCard extends StatefulWidget {
   final String? banner;
@@ -27,7 +30,7 @@ class ProjectCardState extends State<ProjectCard> {
 
   @override
   Widget build(BuildContext context) {
-    // final appProvider = Provider.of<AppProvider>(context);
+    final themeChanger = Provider.of<ThemeChanger>(context);
 
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
@@ -39,8 +42,8 @@ class ProjectCardState extends State<ProjectCard> {
       onTap: widget.projectLink == null
           ? () {}
           : () => openURL(
-        widget.projectLink!,
-      ),
+                widget.projectLink!,
+              ),
       onHover: (isHovering) {
         if (isHovering) {
           setState(() {
@@ -53,28 +56,30 @@ class ProjectCardState extends State<ProjectCard> {
         }
       },
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: width*0.01),
-        padding: EdgeInsets.symmetric(horizontal: width*0.05),
-        width: width*0.8,
-        height: height*0.20,
+        margin: EdgeInsets.symmetric(horizontal: width * 0.01),
+        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+        width: width * 0.8,
+        height: height * 0.20,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: themeChanger.isDark
+              ? Colors.grey.shade900
+              : Colors.white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: isHover
               ? [
-            BoxShadow(
-              color: const Color(0xffC0392B).withAlpha(100),
-              blurRadius: 12.0,
-              offset: const Offset(0.0, 0.0),
-            )
-          ]
+                  BoxShadow(
+                    color: const Color(0xffC0392B).withAlpha(100),
+                    blurRadius: 12.0,
+                    offset: const Offset(0.0, 0.0),
+                  )
+                ]
               : [
-            BoxShadow(
-              color: Colors.black.withAlpha(100),
-              blurRadius: 12.0,
-              offset: const Offset(0.0, 0.0),
-            )
-          ],
+                  BoxShadow(
+                    color: Colors.black.withAlpha(100),
+                    blurRadius: 12.0,
+                    offset: const Offset(0.0, 0.0),
+                  )
+                ],
         ),
         child: Stack(
           fit: StackFit.expand,
@@ -84,47 +89,49 @@ class ProjectCardState extends State<ProjectCard> {
               children: [
                 widget.projectIcon != null
                     ? (width > 1135 || width < 950)
-                    ? Image.asset(
-                  widget.projectIcon!,
-                  height: height * 0.05,
-                )
-                    : Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Image.asset(
-                      widget.projectIcon!,
-                      height: height * 0.03,
-                    ),
-                    SizedBox(
-                      width: width * 0.01,
-                    ),
-                    Text(
-                      widget.projectTitle,
-                      // style: AppText.b2b,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                )
+                        ? Image.asset(
+                            widget.projectIcon!,
+                            height: height * 0.05,
+                          )
+                        : Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Image.asset(
+                                widget.projectIcon!,
+                                height: height * 0.03,
+                              ),
+                              SizedBox(
+                                width: width * 0.01,
+                              ),
+                              Text(
+                                widget.projectTitle,
+                                // style: AppText.b2b,
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          )
                     : Container(),
                 widget.projectIconData != null
                     ? Icon(
-                  widget.projectIconData,
-                  color: const Color(0xffC0392B),
-                  size: height * 0.1,
-                )
+                        widget.projectIconData,
+                        color: const Color(0xffC0392B),
+                        size: height * 0.1,
+                      )
                     : Container(),
                 (width > 1135 || width < 950)
                     ? SizedBox(
-                  height: height * 0.02,
-                )
+                        height: height * 0.02,
+                      )
                     : const SizedBox(),
                 (width > 1135 || width < 950)
                     ? Text(
-                  widget.projectTitle,
-                  style: const TextStyle( fontFamily: 'Poppins-Bold',
-                      fontWeight: FontWeight.bold,fontSize: 18),
-                  textAlign: TextAlign.center,
-                )
+                        widget.projectTitle,
+                        style: const TextStyle(
+                            fontFamily: 'Poppins-Bold',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                        textAlign: TextAlign.center,
+                      )
                     : Container(),
                 SizedBox(
                   height: height * 0.02,
@@ -132,8 +139,8 @@ class ProjectCardState extends State<ProjectCard> {
                 Text(
                   widget.projectDescription,
                   textAlign: TextAlign.center,
-                  style: const TextStyle( fontFamily: 'Poppins-Light',
-                    height: 1.5,fontSize: 15),
+                  style: const TextStyle(
+                      fontFamily: 'Poppins-Light', height: 1.5, fontSize: 15),
                 ),
                 SizedBox(
                   height: height * 0.01,
@@ -147,8 +154,8 @@ class ProjectCardState extends State<ProjectCard> {
                 fit: BoxFit.fill,
                 child: widget.banner != null
                     ? Image.asset(
-                  widget.banner!,
-                )
+                        widget.banner!,
+                      )
                     : Container(),
               ),
             ),

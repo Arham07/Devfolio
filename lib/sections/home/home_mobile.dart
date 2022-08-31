@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
+import '../../animation/entrance_animation.dart';
 import '../../utils/utils.dart';
 import '../../widgets/social_links.dart';
 
@@ -13,7 +14,7 @@ class HomeMobile extends StatelessWidget {
 
     return SingleChildScrollView(
       child: SizedBox(
-        height: size.height *1.00,
+        height: size.height * 1.00,
         child: Stack(
           children: [
             Positioned(
@@ -21,15 +22,20 @@ class HomeMobile extends StatelessWidget {
               right: -50,
               child: Opacity(
                 opacity: 0.9,
-                child: Image.asset(
-                  StaticUtils.blackWhitePhoto,
-                  height: size.height*0.45,
+                child: EntranceFader(
+                  offset: const Offset(0, 0),
+                  delay: const Duration(seconds: 1),
+                  duration: const Duration(milliseconds: 800),
+                  child: Image.asset(
+                    StaticUtils.blackWhitePhoto,
+                    height: size.height * 0.45,
+                  ),
                 ),
               ),
             ),
             Container(
               margin: EdgeInsets.fromLTRB(
-                size.width * 0.10,
+                size.width * 0.04,
                 size.width * 0.12,
                 0,
                 0,
@@ -37,21 +43,28 @@ class HomeMobile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: size.height*0.04,),
+                  SizedBox(
+                    height: size.height * 0.04,
+                  ),
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Text(
                         "HEY THERE! ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w300, fontSize: 18),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300, fontSize: 18),
                       ),
                       SizedBox(
                         width: size.width * 0.01,
                       ),
-                      Image.asset(
-                        StaticUtils.hi,
-                        height: size.height*0.04,
+                      EntranceFader(
+                        offset: const Offset(0, 0),
+                        delay: const Duration(seconds: 1),
+                        duration: const Duration(milliseconds: 800),
+                        child: Image.asset(
+                          StaticUtils.hi,
+                          height: size.height * 0.04,
+                        ),
                       ),
                     ],
                   ),
@@ -79,34 +92,39 @@ class HomeMobile extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.01,
                   ),
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.play_arrow_rounded,
-                        color: Colors.red,
-                      ),
-                      AnimatedTextKit(
-                        animatedTexts: [
-                          TyperAnimatedText(
-                            ' Flutter Developer',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: TextStyle(fontSize: 22),
-                          ),
-                          TyperAnimatedText(
-                            ' Gamer',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: TextStyle(fontSize: 22),
-                          ),
-                          TyperAnimatedText(
-                            ' A friend :)',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: TextStyle(fontSize: 22),
-                          ),
-                        ],
-                        repeatForever: true,
-                        isRepeatingAnimation: true,
-                      ),
-                    ],
+                  EntranceFader(
+                    offset: const Offset(-10, 0),
+                    delay: const Duration(seconds: 1),
+                    duration: const Duration(milliseconds: 800),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.play_arrow_rounded,
+                          color: Colors.red,
+                        ),
+                        AnimatedTextKit(
+                          animatedTexts: [
+                            TyperAnimatedText(
+                              ' Flutter Developer',
+                              speed: const Duration(milliseconds: 50),
+                              textStyle: TextStyle(fontSize: 22),
+                            ),
+                            TyperAnimatedText(
+                              ' A Gamer',
+                              speed: const Duration(milliseconds: 50),
+                              textStyle: TextStyle(fontSize: 22),
+                            ),
+                            TyperAnimatedText(
+                              ' A friend :)',
+                              speed: const Duration(milliseconds: 50),
+                              textStyle: TextStyle(fontSize: 22),
+                            ),
+                          ],
+                          repeatForever: true,
+                          isRepeatingAnimation: true,
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: size.height * 0.01,

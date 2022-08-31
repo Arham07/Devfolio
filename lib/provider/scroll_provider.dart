@@ -5,22 +5,15 @@ class ScrollProvider extends ChangeNotifier {
 
   ScrollController get controller => scrollController;
 
-  // scroll(int index) {
-  //   double offset = index == 1
-  //       ? 270
-  //       : index == 2
-  //       ? 255
-  //       : index == 3
-  //       ? 250
-  //       : 245;
-  //   controller.animateTo(
-  //     AppDimensions.normalize(
-  //       offset * index.toDouble(),
-  //     ),
-  //     duration: const Duration(seconds: 1),
-  //     curve: Curves.easeInOut,
-  //   );
-  // }
+  scroll(int index,BuildContext context) {
+    index == 0
+        ? scrollController.animateTo(
+            MediaQuery.of(context).size.height * 0.0,
+            duration: const Duration(seconds: 1),
+            curve: Curves.easeInOut,
+          )
+        : null;
+  }
 
   scrollMobile(int index, BuildContext context) {
     index == 0

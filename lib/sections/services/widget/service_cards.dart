@@ -3,7 +3,9 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../../provider/theme/theme_provider.dart';
 import '../../../utils/utils.dart';
 
 class ServiceCard extends StatefulWidget {
@@ -29,6 +31,7 @@ class _ServiceCardState extends State<ServiceCard> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final themeChanger = Provider.of<ThemeChanger>(context);
 
     return InkWell(
       hoverColor: Colors.transparent,
@@ -84,7 +87,9 @@ class _ServiceCardState extends State<ServiceCard> {
           height: size.height * 0.035,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: themeChanger.isDark
+                ? Colors.grey.shade900
+                : Colors.white,
             borderRadius: BorderRadius.circular(15),
             boxShadow: isHover
                 ? [

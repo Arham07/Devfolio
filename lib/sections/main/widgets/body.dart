@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-
 import '../../../provider/scroll_provider.dart';
 import '../../../utils/utils.dart';
 

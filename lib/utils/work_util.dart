@@ -15,5 +15,5 @@ class WorkUtils {
     // "https://sastaticket.pk/"
   ];
 
-  static const List<double> communityLogoHeight = [55.0,55.0, 30.0];
+  static const List<double> communityLogoHeight = [55.0,48.0, 30.0];
 }

@@ -1,42 +1,45 @@
-
+import 'package:universal_html/html.dart' as html;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import '../../../animation/entrance_animation.dart';
 import '../../../provider/drawer_provider.dart';
 import '../../../utils/navbar_utils.dart';
+import '../../../utils/utils.dart';
 import '../../../widgets/navbar_name_logo.dart';
-
+import '../../../widgets/navigator_action_btn.dart';
+//
 // class NavbarDesktop extends StatelessWidget {
 //   const NavbarDesktop({Key? key}) : super(key: key);
 //
 //   @override
 //   Widget build(BuildContext context) {
 //     // final appProvider = Provider.of<AppProvider>(context);
+//     Size size=MediaQuery.of(context).size;
 //
 //     return Container(
-//       // padding: Space.all(),
-//       color:Colors.white,
+//       // color:Colors.white,
 //       child: Row(
 //         children: [
 //           const NavBarLogo(),
-//           // Space.xm!,
+//           SizedBox(width: size.width*0.35,),
 //           ...NavBarUtils.names.asMap().entries.map(
 //                 (e) => NavBarActionButton(
 //               label: e.value,
 //               index: e.key,
 //             ),
 //           ),
+//           SizedBox(width: size.width*0.015,),
 //           EntranceFader(
 //             offset: const Offset(0, -10),
 //             delay: const Duration(milliseconds: 100),
 //             duration: const Duration(milliseconds: 250),
 //             child: MaterialButton(
-//               hoverColor: AppTheme.c!.primary!.withAlpha(150),
+//               hoverColor: const Color(0xffC0392B).withAlpha(150),
 //               shape: RoundedRectangleBorder(
 //                 borderRadius: BorderRadius.circular(5.0),
 //                 side: BorderSide(
-//                   color: AppTheme.c!.primary!,
+//                   color: const Color(0xffC0392B),
 //                 ),
 //               ),
 //               onPressed: () {
@@ -46,26 +49,26 @@ import '../../../widgets/navbar_name_logo.dart';
 //                 );
 //               },
 //               child: Padding(
-//                 padding: Space.all(1.25, 0.45),
+//                 padding: EdgeInsets.symmetric(horizontal:size.width*0.02,vertical: size.height*0.015),
 //                 child: Text(
 //                   'RESUME',
-//                   style: AppText.l1b,
+//                   style: TextStyle(fontFamily: 'Poppins-Regular',
+//                    fontSize: 14,fontWeight: FontWeight.bold
+//                   ),
 //                 ),
 //               ),
 //             ),
 //           ),
-//           Space.x!,
+//          SizedBox(width: size.width*0.01,),
 //           Switch(
 //             inactiveTrackColor: Colors.grey,
-//             value: appProvider.isDark,
+//             value: true,
 //             onChanged: (value) {
-//               appProvider.setTheme(
-//                 !value ? ThemeMode.light : ThemeMode.dark,
-//               );
+//
 //             },
-//             activeColor: AppTheme.c!.primary!,
+//             activeColor: const Color(0xffC0392B),
 //           ),
-//           Space.x!,
+//           // Space.x!,
 //         ],
 //       ),
 //     );
