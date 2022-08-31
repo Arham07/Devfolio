@@ -139,7 +139,7 @@ class AboutMobile extends StatelessWidget {
         ),
         Wrap(
             alignment: WrapAlignment.center,
-            crossAxisAlignment: WrapCrossAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,  
             children: WorkUtils.logos
                 .asMap()
                 .entries
