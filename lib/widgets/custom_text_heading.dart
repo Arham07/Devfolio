@@ -13,7 +13,7 @@ class CustomSectionHeading extends StatelessWidget {
     return Text(
       text,
       style: const TextStyle(
-        fontFamily: 'Montserrat',fontSize: 44,
+        fontFamily: 'Montserrat',fontSize: 45,height: 1.2
       )
     );
   }
@@ -30,7 +30,7 @@ class CustomSectionSubHeading extends StatelessWidget {
     return Text(
       text,
         style: const TextStyle(
-          fontFamily: 'Montserrat',fontWeight: FontWeight.w300,fontSize: 12
+          fontFamily: 'Montserrat',fontWeight: FontWeight.w300,fontSize: 13
         )
     );
   }

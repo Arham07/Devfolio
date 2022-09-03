@@ -56,9 +56,9 @@ class ProjectCardState extends State<ProjectCard> {
         }
       },
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: width * 0.01),
+        margin: EdgeInsets.symmetric(horizontal: width * 0.02),
         padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-        width: width * 0.8,
+        width: width * 0.78,
         height: height * 0.20,
         decoration: BoxDecoration(
           color: themeChanger.isDark

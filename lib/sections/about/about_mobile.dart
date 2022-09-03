@@ -110,17 +110,19 @@ class AboutMobile extends StatelessWidget {
               SizedBox(
                 height: height * 0.02,
               ),
+              const AboutMeData(
+                data: "Name",
+                information: "Arham Javed",
+              ),
+              const AboutMeData(
+                data: "Email",
+                information: "arhamj0726@gmail.com",
+              ),
             ],
           ),
+
         ),
-        const AboutMeData(
-          data: "Name",
-          information: "Arham Javed",
-        ),
-        const AboutMeData(
-          data: "Email",
-          information: "arhamj0726@gmail.com",
-        ),
+
         SizedBox(
           height: height * 0.02,
         ),
@@ -139,17 +141,17 @@ class AboutMobile extends StatelessWidget {
         ),
         Wrap(
             alignment: WrapAlignment.center,
-            crossAxisAlignment: WrapCrossAlignment.center,  
+            crossAxisAlignment: WrapCrossAlignment.center,
             children: WorkUtils.logos
                 .asMap()
                 .entries
                 .map(
                   (e) => CommunityIconBtn(
-                    icon: e.value,
-                    link: WorkUtils.communityLinks[e.key],
-                    height: WorkUtils.communityLogoHeight[e.key],
-                  ),
-                )
+                icon: e.value,
+                link: WorkUtils.communityLinks[e.key],
+                height: WorkUtils.communityLogoHeight[e.key],
+              ),
+            )
                 .toList()),
       ],
     );

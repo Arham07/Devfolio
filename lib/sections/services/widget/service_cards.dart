@@ -12,12 +12,16 @@ class ServiceCard extends StatefulWidget {
   final String serviceIcon;
   final String serviceTitle;
   final String serviceDescription;
+  final double? cardWidth;
+  final double? cardHeight;
 
   const ServiceCard({
     Key? key,
     required this.serviceIcon,
     required this.serviceTitle,
     required this.serviceDescription,
+    this.cardWidth,
+    this.cardHeight,
   }) : super(key: key);
 
   @override
@@ -52,11 +56,13 @@ class _ServiceCardState extends State<ServiceCard> {
         }
       },
       child: FlipCard(
-        flipOnTouch: kIsWeb ? false : true,
+        flipOnTouch: kIsWeb ? true : false,
         key: cardKey,
         back: Container(
-          width: size.width * 0.62,
-          height: size.height * 0.035,
+          // width: size.width * 0.62,
+          // height: size.height * 0.035,
+          width: widget.cardWidth,
+          height:widget.cardHeight,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -87,9 +93,7 @@ class _ServiceCardState extends State<ServiceCard> {
           height: size.height * 0.035,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
-            color: themeChanger.isDark
-                ? Colors.grey.shade900
-                : Colors.white,
+            color: themeChanger.isDark ? Colors.grey.shade900 : Colors.white,
             borderRadius: BorderRadius.circular(15),
             boxShadow: isHover
                 ? [

@@ -37,13 +37,13 @@ class ServiceCardBackWidget extends StatelessWidget {
             onPressed: () => showDialog(
                 context: context,
                 builder: (contecxt) => AlertDialog(
-                      title: Text(
+                      title: const Text(
                         "Hire Me!",
                       ),
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.pop(context),
-                          child: Text("Back",style: const TextStyle(
+                          child: const Text("Back",style: TextStyle(
                             color:  Color(0xffC0392B),fontWeight: FontWeight.w700
                           ),),
                         )

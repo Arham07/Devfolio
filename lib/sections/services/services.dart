@@ -1,3 +1,5 @@
+import 'package:devfolio/responsive/responsive.dart';
+import 'package:devfolio/sections/services/services_desktop.dart';
 import 'package:flutter/material.dart';
 import 'package:devfolio/sections/services/services_mobile.dart';
 
@@ -6,6 +8,9 @@ class Services extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ServiceMobile();
+    return Responsive(mobile:  ServiceMobile(),
+    tablet: ServiceMobile(),
+    desktop: ServiceMobile(),
+   );
   }
 }

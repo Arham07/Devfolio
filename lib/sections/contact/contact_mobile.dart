@@ -27,11 +27,12 @@ class ContactMobileTab extends StatelessWidget {
                 projectIconData: ContactUtils.contactIcon[i],
                 projectTitle: ContactUtils.titles[i],
                 projectDescription: ContactUtils.details[i],
+                projectLink: ContactUtils.links[i],
               ),
             ),
           ),
           options: CarouselOptions(
-            height: MediaQuery.of(context).size.height * 0.25,
+            height: MediaQuery.of(context).size.height * 0.26,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,

@@ -16,6 +16,10 @@ class ServiceMobile extends StatelessWidget {
         const CustomSectionHeading(
           text: '\nWhat I can do?',
         ),
+        SizedBox(
+          height: height * 0.01,
+        ),
+
         const CustomSectionSubHeading(
           text: 'I may not be perfect but surely I\'m of some use :)\n\n',
         ),
@@ -28,6 +32,8 @@ class ServiceMobile extends StatelessWidget {
               serviceIcon: ServicesUtils.servicesIcons[i],
               serviceTitle: ServicesUtils.servicesTitles[i],
               serviceDescription: ServicesUtils.servicesDescription[i],
+              cardHeight:  height * 0.030,
+              cardWidth:width * 0.62,
             ),
           ),
           options: CarouselOptions(

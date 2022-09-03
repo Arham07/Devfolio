@@ -18,13 +18,13 @@ class AboutMeData extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeChanger = Provider.of<ThemeChanger>(context);
     return Align(
-      alignment: alignment ?? Alignment.center,
+      alignment: alignment ?? Alignment.center ,
       child: RichText(
         text: TextSpan(
           children: [
             TextSpan(
               text: "$data: ",
-                style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,fontFamily: 'Poppins',color: Colors.black)
+                style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,fontFamily: 'Poppins',color:themeChanger.isDark? Colors.white:Colors.black87,)
             ),
             TextSpan(
               text: " $information\n",
