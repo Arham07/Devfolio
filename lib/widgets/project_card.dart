@@ -64,7 +64,7 @@ class ProjectCardState extends State<ProjectCard> {
         // height: height * 0.20,
         width: Responsive.isDesktop(context)
             ? width * 0.33
-            : width * 0.72, 
+            : width * 0.72,
         height: Responsive.isDesktop(context)
             ?height * 0.40
             : height * 0.20,

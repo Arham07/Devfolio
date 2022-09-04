@@ -75,8 +75,11 @@ class NavbarDesktop extends StatelessWidget {
               ),
               Switch(
                 inactiveTrackColor: Colors.grey,
-                value: true,
-                onChanged: (value) {},
+                value: themeProvider.isDark,
+                onChanged: (value) {
+                  themeProvider
+                      .setTheme(themeProvider.isDark ? ThemeMode.light : ThemeMode.dark);
+                },
                 activeColor: const Color(0xffC0392B),
               ),
               SizedBox(
