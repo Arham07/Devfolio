@@ -26,14 +26,12 @@ class _MainPageState extends State<MainPage> {
       // drawer: const MobileDrawer(),
       body: SafeArea(
         child: Stack(
-          children: const [
+          children: [
             Body(),
             ArrowOnTop(),
-            // Responsive.isTablet(context) || Responsive.isMobile(context)
-            //     ? const NavBarTablet()
-            //     :
-            // const NavbarDesktop()
-            NavBarTablet(),
+            Responsive.isTablet(context) || Responsive.isMobile(context)
+                ? const NavBarTablet()
+                : const NavbarDesktop(),
           ],
         ),
       ),

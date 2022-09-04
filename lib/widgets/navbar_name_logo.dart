@@ -8,19 +8,19 @@ class NavBarLogo extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
+        const Text(
           "< ",
             style: TextStyle(
                fontSize: 24
             )
         ),
-        Text("Arham",
+        const Text("Arham",
             style: TextStyle(
               fontFamily: 'Agustina',fontSize: 20,fontWeight: FontWeight.bold
             )),
         Text(
           MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
-            style: TextStyle(
+            style: const TextStyle(
                fontSize: 24,
             )
         )

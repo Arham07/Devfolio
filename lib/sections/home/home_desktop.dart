@@ -5,8 +5,8 @@ import '../../animation/entrance_animation.dart';
 import '../../utils/utils.dart';
 import '../../widgets/social_links.dart';
 
-class HomeMobile extends StatelessWidget {
-  const HomeMobile({Key? key}) : super(key: key);
+class HomeDesktop extends StatelessWidget {
+  const HomeDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class HomeMobile extends StatelessWidget {
 
     return SingleChildScrollView(
       child: SizedBox(
-        height: size.height * 1.00,
+        height: size.height * 1.02,
         child: Stack(
           children: [
             Positioned(
               bottom: 0.0,
-              right: -50,
+              right: 10,
               child: Opacity(
                 opacity: 0.9,
                 child: EntranceFader(
@@ -28,15 +28,15 @@ class HomeMobile extends StatelessWidget {
                   duration: const Duration(milliseconds: 800),
                   child: Image.asset(
                     StaticUtils.blackWhitePhoto,
-                    height: size.height * 0.45,
+                    height: size.height * 0.85,
                   ),
                 ),
               ),
             ),
             Container(
               margin: EdgeInsets.fromLTRB(
-                size.width * 0.04,
-                size.width * 0.12,
+                size.width * 0.07,
+                size.width * 0.15,
                 0,
                 0,
               ),
@@ -50,9 +50,9 @@ class HomeMobile extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Text(
-                        "HEY THERE! ",
+                        "WELCOME TO MY PORTFOLIO! ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w300, fontSize: 18),
+                            fontWeight: FontWeight.w300, fontSize: 24),
                       ),
                       SizedBox(
                         width: size.width * 0.01,
@@ -77,15 +77,14 @@ class HomeMobile extends StatelessWidget {
                       Text(
                         "Arham ",
                         style: TextStyle(
-                          fontSize: 38,
+                          fontSize: 72,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       Text(
                         "Javed",
                         style: TextStyle(
-                          fontSize: 38,
-                          fontWeight: FontWeight.w100,
+                          fontSize: 72,fontWeight: FontWeight.w100
                         ),
                       ),
                     ],
@@ -128,7 +127,7 @@ class HomeMobile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.01,
+                    height: size.height * 0.05,
                   ),
                   const SocialLinks(),
                 ],

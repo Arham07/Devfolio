@@ -1,3 +1,4 @@
+import 'package:devfolio/responsive/responsive.dart';
 import 'package:devfolio/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -25,10 +26,13 @@ class SocialLinks extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: size.width * 0.005),
               child: IconButton(
                 highlightColor: Colors.white54,
-                splashRadius: size.width * 0.02,
+                splashRadius: size.width * 0.022,
                 icon: Image.asset(e.value,
-                    color: themeChanger.isDark ? Colors.white : Colors.black, height: size.height * 0.03),
-                iconSize: 18,
+                    color: themeChanger.isDark ? Colors.white : Colors.black,
+                    height: Responsive.isMobile(context)
+                        ? size.height * 0.03
+                        : size.height * 0.3),
+                iconSize: Responsive.isMobile(context) ? 18 : 40,
                 onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],
                 ),

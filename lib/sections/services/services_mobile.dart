@@ -32,7 +32,7 @@ class ServiceMobile extends StatelessWidget {
               serviceIcon: ServicesUtils.servicesIcons[i],
               serviceTitle: ServicesUtils.servicesTitles[i],
               serviceDescription: ServicesUtils.servicesDescription[i],
-              cardHeight:  height * 0.030,
+              cardHeight: height * 0.035,
               cardWidth:width * 0.62,
             ),
           ),

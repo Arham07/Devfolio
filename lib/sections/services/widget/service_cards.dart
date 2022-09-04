@@ -1,3 +1,4 @@
+import 'package:devfolio/responsive/responsive.dart';
 import 'package:devfolio/sections/services/widget/services_back_card.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
@@ -56,13 +57,15 @@ class _ServiceCardState extends State<ServiceCard> {
         }
       },
       child: FlipCard(
-        flipOnTouch: kIsWeb ? true : false,
+        flipOnTouch: kIsWeb ? false : true,
         key: cardKey,
         back: Container(
-          // width: size.width * 0.62,
-          // height: size.height * 0.035,
-          width: widget.cardWidth,
-          height:widget.cardHeight,
+          width: Responsive.isDesktop(context)
+              ? size.width * 0.20
+              : size.width * 0.57,
+          height: Responsive.isDesktop(context)
+              ? size.height * 0.35
+              : size.height * 0.28,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -89,8 +92,14 @@ class _ServiceCardState extends State<ServiceCard> {
           ),
         ),
         front: Container(
-          width: size.width * 0.62,
-          height: size.height * 0.035,
+          // width: size.width * 0.62,
+          // height: size.height * 0.035,
+          width: Responsive.isDesktop(context)
+              ? size.width * 0.20
+              : size.width * 0.57,
+          height: Responsive.isDesktop(context)
+              ? size.height * 0.35
+              : size.height * 0.28,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
             color: themeChanger.isDark ? Colors.grey.shade900 : Colors.white,
@@ -116,10 +125,11 @@ class _ServiceCardState extends State<ServiceCard> {
             children: [
               Image.asset(
                 widget.serviceIcon,
-                height: size.height * 0.090,
-                color: widget.serviceIcon.contains(StaticUtils.openSource)
-                    // &&
-                    // !appProvider.isDark
+                height: Responsive.isDesktop(context)
+                    ? size.height * 0.12
+                    : size.height * 0.090,
+                color: widget.serviceIcon.contains(StaticUtils.openSource) &&
+                        !themeChanger.isDark
                     ? Colors.black
                     : null,
               ),
@@ -129,6 +139,9 @@ class _ServiceCardState extends State<ServiceCard> {
               Text(
                 widget.serviceTitle,
                 textAlign: TextAlign.center,
+                // style: TextStyle(
+                //   fontSize: Responsive.isDesktop(context)? 22: null
+                // ),
               ),
             ],
           ),

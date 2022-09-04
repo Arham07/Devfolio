@@ -10,7 +10,7 @@ class Services extends StatelessWidget {
   Widget build(BuildContext context) {
     return Responsive(mobile:  ServiceMobile(),
     tablet: ServiceMobile(),
-    desktop: ServiceMobile(),
+    desktop: ServiceDesktop(),
    );
   }
 }

@@ -4,6 +4,8 @@ import '../constants.dart';
 import '../provider/theme/theme_provider.dart';
 import 'package:devfolio/provider/theme/core_theme.dart' as theme;
 
+import '../responsive/responsive.dart';
+
 class ProjectCard extends StatefulWidget {
   final String? banner;
   final String? projectLink;
@@ -56,10 +58,16 @@ class ProjectCardState extends State<ProjectCard> {
         }
       },
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: width * 0.02),
-        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-        width: width * 0.78,
-        height: height * 0.20,
+        padding: const EdgeInsets.all(10),
+        margin: EdgeInsets.symmetric(horizontal: width*0.01),
+        // width: width * 0.78,
+        // height: height * 0.20,
+        width: Responsive.isDesktop(context)
+            ? width * 0.33
+            : width * 0.72, 
+        height: Responsive.isDesktop(context)
+            ?height * 0.40
+            : height * 0.20,
         decoration: BoxDecoration(
           color: themeChanger.isDark
               ? Colors.grey.shade900
