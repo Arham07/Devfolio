@@ -1,3 +1,4 @@
+import 'package:devfolio/provider/theme/core_theme.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -47,15 +48,18 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
             )
                 .toList(),
           ),
-          // Space.y2!,
+          SizedBox(height: height*0.07,),
           SizedBox(
-            // height: AppDimensions.normalize(14),
-            // width: AppDimensions.normalize(50),
+            height: height*0.06,
+            width: width*0.12,
+            // icon theme colors and opacity
             child: OutlinedButton(
               onPressed: () => openURL(StaticUtils.gitHub),
-              child: Text(
+              child: const Text(
                 'See More',
-                // style: AppText.l1b,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold
+                ),
               ),
             ),
           )
