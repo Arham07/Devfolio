@@ -35,6 +35,7 @@ class PortfolioMobileTab extends StatelessWidget {
           ),
           options: CarouselOptions(
             height: height * 0.4,
+            viewportFraction: 0.77,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,
@@ -49,9 +50,9 @@ class PortfolioMobileTab extends StatelessWidget {
           width: width * 0.3,
           child: OutlinedButton(
             onPressed: () => openURL(StaticUtils.gitHub),
-            child: Text('See More',
+            child: const Text('See More',
                 style: TextStyle(
-                    color: const Color(0xffC0392B),
+                    color: Color(0xffC0392B),
                     fontSize: 14,
                     fontFamily: 'Poppins-Bold',
                     fontWeight: FontWeight.bold)),

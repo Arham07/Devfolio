@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:devfolio/widgets/community_button.dart';
 import '../../constants.dart';
+import '../../provider/theme/theme_provider.dart';
 import '../../utils/about_util.dart';
 import '../../utils/utils.dart';
 import '../../utils/work_util.dart';
@@ -18,7 +20,7 @@ class AboutMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-
+    final themeProvider = Provider.of<ThemeChanger>(context);
     return Column(
       children: [
         Container(
@@ -41,7 +43,7 @@ class AboutMobile extends StatelessWidget {
               SizedBox(
                 height: height * 0.03,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Who am I?",
@@ -65,13 +67,17 @@ class AboutMobile extends StatelessWidget {
               SizedBox(
                 height: height * 0.02,
               ),
-              Text(AboutUtils.aboutMeDetail,
-                  style: TextStyle(
-                      height: 2,
-                      letterSpacing: 1.1,
-                      fontFamily: 'Montserrat',
-                      fontSize: 12,
-                      color: Color(0xff696969))),
+              Text(
+                AboutUtils.aboutMeDetail,
+                style: TextStyle(
+                    height: 2,
+                    letterSpacing: 1.1,
+                    fontFamily: 'Montserrat',
+                    fontSize: 12,
+                    color: themeProvider.isDark
+                        ? Colors.white
+                        : const Color(0xff696969)),
+              ),
               SizedBox(
                 height: height * 0.02,
               ),
@@ -82,7 +88,7 @@ class AboutMobile extends StatelessWidget {
               SizedBox(
                 height: height * 0.01,
               ),
-              Text(
+              const Text(
                 'Technologies I have worked with:',
                 style: TextStyle(
                     color: Color(0xffC0392B),
@@ -120,9 +126,7 @@ class AboutMobile extends StatelessWidget {
               ),
             ],
           ),
-
         ),
-
         SizedBox(
           height: height * 0.02,
         ),
@@ -147,11 +151,11 @@ class AboutMobile extends StatelessWidget {
                 .entries
                 .map(
                   (e) => CommunityIconBtn(
-                icon: e.value,
-                link: WorkUtils.communityLinks[e.key],
-                height: WorkUtils.communityLogoHeight[e.key],
-              ),
-            )
+                    icon: e.value,
+                    link: WorkUtils.communityLinks[e.key],
+                    height: WorkUtils.communityLogoHeight[e.key],
+                  ),
+                )
                 .toList()),
       ],
     );

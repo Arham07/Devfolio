@@ -32,7 +32,7 @@ class ContactMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: MediaQuery.of(context).size.height * 0.26,
+            height: MediaQuery.of(context).size.height * 0.3,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,
