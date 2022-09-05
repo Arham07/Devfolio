@@ -60,11 +60,11 @@ class ProjectCardState extends State<ProjectCard> {
       child: Container(
         padding: const EdgeInsets.all(10),
         margin: Responsive.isDesktop(context)
-            ? EdgeInsets.symmetric(horizontal: width * 0.007)
+            ? EdgeInsets.symmetric(horizontal: width * 0.01)
             : null,
         // width: width * 0.78,
         // height: height * 0.20,
-        width: Responsive.isDesktop(context) ? width * 0.31 : width * 0.74,
+        width: Responsive.isDesktop(context) ? width * 0.32 : width * 0.74,
         height: Responsive.isDesktop(context) ? height * 0.38 : height * 0.22,
         decoration: BoxDecoration(
           color: themeChanger.isDark ? Colors.grey.shade900 : Colors.white,
