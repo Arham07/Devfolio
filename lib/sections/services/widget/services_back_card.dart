@@ -19,14 +19,14 @@ class ServiceCardBackWidget extends StatelessWidget {
       children: [
         Text(
           serviceDesc,
-          style: TextStyle(
+          style: const TextStyle(
               fontFamily: 'Montserrat',
               fontSize: 12,
               height: 1.5,
               fontWeight: FontWeight.w600,
               color: Colors.black54),
         ),
-        Divider(
+        const Divider(
           color: Colors.black38,
         ),
         SizedBox(
@@ -36,7 +36,7 @@ class ServiceCardBackWidget extends StatelessWidget {
             color: const Color(0xffC0392B),
             onPressed: () => showDialog(
                 context: context,
-                builder: (contecxt) => AlertDialog(
+                builder: (context) => AlertDialog(
                       title: const Text(
                         "Hire Me!",
                       ),
@@ -68,7 +68,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                                 SizedBox(
                                   width: size.width * 0.05,
                                 ),
-                                Text(
+                                const Text(
                                   'WhatsApp',
                                   style: TextStyle(color: Colors.white),
                                 ),
@@ -95,7 +95,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                                 SizedBox(
                                   width: size.width * 0.05,
                                 ),
-                                Text('Upwork',
+                                const Text('Upwork',
                                     style: TextStyle(color: Colors.white)),
                               ],
                             ),

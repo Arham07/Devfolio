@@ -13,16 +13,12 @@ class ServiceCard extends StatefulWidget {
   final String serviceIcon;
   final String serviceTitle;
   final String serviceDescription;
-  final double? cardWidth;
-  final double? cardHeight;
 
   const ServiceCard({
     Key? key,
     required this.serviceIcon,
     required this.serviceTitle,
     required this.serviceDescription,
-    this.cardWidth,
-    this.cardHeight,
   }) : super(key: key);
 
   @override
@@ -62,7 +58,7 @@ class _ServiceCardState extends State<ServiceCard> {
         back: Container(
           width: Responsive.isDesktop(context)
               ? size.width * 0.20
-              : size.width * 0.57,
+              : size.width * 0.6,
           height: Responsive.isDesktop(context)
               ? size.height * 0.35
               : size.height * 0.28,
@@ -96,7 +92,7 @@ class _ServiceCardState extends State<ServiceCard> {
           // height: size.height * 0.035,
           width: Responsive.isDesktop(context)
               ? size.width * 0.20
-              : size.width * 0.57,
+              : size.width * 0.6,
           height: Responsive.isDesktop(context)
               ? size.height * 0.35
               : size.height * 0.28,

@@ -64,7 +64,7 @@ class ProjectCardState extends State<ProjectCard> {
             : null,
         // width: width * 0.78,
         // height: height * 0.20,
-        width: Responsive.isDesktop(context) ? width * 0.32 : width * 0.74,
+        width: Responsive.isDesktop(context) ? width * 0.32 : width * 0.75,
         height: Responsive.isDesktop(context) ? height * 0.38 : height * 0.22,
         decoration: BoxDecoration(
           color: themeChanger.isDark ? Colors.grey.shade900 : Colors.white,
