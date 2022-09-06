@@ -102,7 +102,7 @@ class NavBarTablet extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: size.width * 0.04),
+      padding: EdgeInsets.symmetric(horizontal: size.width * 0.04,vertical: size.height*0.02),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

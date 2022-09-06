@@ -24,7 +24,7 @@ class _MobileDrawerState extends State<MobileDrawer> {
       child: Material(
         color: themeProvider.isDark ? Colors.grey[900] : Colors.white,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 25.0, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 30.0, 0, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

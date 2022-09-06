@@ -1,6 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-
 import '../../animation/entrance_animation.dart';
 import '../../utils/utils.dart';
 import '../../widgets/social_links.dart';
@@ -36,7 +35,7 @@ class HomeMobile extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(
                 size.width * 0.04,
-                size.width * 0.12,
+                size.width * 0.16,
                 0,
                 0,
               ),
