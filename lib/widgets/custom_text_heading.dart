@@ -13,7 +13,7 @@ class CustomSectionHeading extends StatelessWidget {
     return Text(
       text,
       style: const TextStyle(
-        fontFamily: 'Montserrat',fontSize: 45,height: 1.2
+        fontFamily: 'Montserrat',fontSize: 46,height: 1.3
       )
     );
   }

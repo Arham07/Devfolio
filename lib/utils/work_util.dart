@@ -16,4 +16,5 @@ class WorkUtils {
   ];
 
   static const List<double> communityLogoHeight = [55.0,48.0, 30.0];
+  static const List<double> communityLogoHeightWeb = [10.0,10.0, 10.0];
 }

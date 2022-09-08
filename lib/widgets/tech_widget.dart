@@ -8,15 +8,18 @@ class ToolTechWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.play_arrow,
-          color: Color(0xffC0392B).withAlpha(100),
+          color: Color(0xffC0392B),
           size: 14,
         ),
-        Text(
-          " $techName ",
-          style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,fontFamily: 'Poppins',)
-        )
+        Text(" $techName ",
+            style: const TextStyle(
+              fontSize: 13,
+              height: 1.2,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Poppins',
+            ))
       ],
     );
   }
