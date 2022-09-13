@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../responsive/responsive.dart';
+
 class ToolTechWidget extends StatelessWidget {
   final String techName;
 
@@ -14,9 +16,8 @@ class ToolTechWidget extends StatelessWidget {
           size: 14,
         ),
         Text(" $techName ",
-            style: const TextStyle(
-              fontSize: 13,
-              height: 1.2,
+            style: TextStyle(
+              fontSize: Responsive.isDesktop(context) ? 13.5 : 13,
               fontWeight: FontWeight.bold,
               fontFamily: 'Poppins',
             ))

@@ -1,3 +1,4 @@
+import 'package:devfolio/responsive/responsive.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -16,7 +17,11 @@ class CommunityIconBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.08),
+      padding: EdgeInsets.symmetric(
+          horizontal: Responsive.isDesktop(context)
+              ? MediaQuery.of(context).size.width * 0.02
+              : Responsive.isTablet(context)
+              ? MediaQuery.of(context).size.width * 0.05 : MediaQuery.of(context).size.width * 0.08),
       child: InkWell(
         hoverColor: Colors.transparent,
         highlightColor: Colors.transparent,

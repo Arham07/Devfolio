@@ -58,7 +58,7 @@ class _ServiceCardState extends State<ServiceCard> {
         back: Container(
           width: Responsive.isDesktop(context)
               ? size.width * 0.20
-              : size.width * 0.6,
+              : size.width * 0.57,
           height: Responsive.isDesktop(context)
               ? size.height * 0.35
               : size.height * 0.28,
@@ -92,7 +92,7 @@ class _ServiceCardState extends State<ServiceCard> {
           // height: size.height * 0.035,
           width: Responsive.isDesktop(context)
               ? size.width * 0.20
-              : size.width * 0.6,
+              : size.width * 0.57,
           height: Responsive.isDesktop(context)
               ? size.height * 0.35
               : size.height * 0.28,
@@ -123,7 +123,9 @@ class _ServiceCardState extends State<ServiceCard> {
                 widget.serviceIcon,
                 height: Responsive.isDesktop(context)
                     ? size.height * 0.12
-                    : size.height * 0.090,
+                    : Responsive.isMobile(context)
+                        ? size.height * 0.1
+                        : size.height * 0.12,
                 color: widget.serviceIcon.contains(StaticUtils.openSource) &&
                         !themeChanger.isDark
                     ? Colors.black

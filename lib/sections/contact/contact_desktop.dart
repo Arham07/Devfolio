@@ -37,6 +37,7 @@ class ContactDesktop extends StatelessWidget {
                             projectIconData: e.value,
                             projectTitle: ContactUtils.titles[e.key],
                             projectDescription: ContactUtils.details[e.key],
+                            projectLink: ContactUtils.links[e.key],
                           ),
                         ),
                       ))

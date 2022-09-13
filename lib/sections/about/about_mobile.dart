@@ -141,7 +141,7 @@ class AboutMobile extends StatelessWidget {
                   : openURL(StaticUtils.resume);
             }),
         SizedBox(
-          height: height * 0.02,
+          height: height * 0.04,
         ),
         Wrap(
             alignment: WrapAlignment.center,

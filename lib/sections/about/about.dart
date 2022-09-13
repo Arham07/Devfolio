@@ -1,5 +1,6 @@
 import 'package:devfolio/sections/about/about_desktop.dart';
 import 'package:devfolio/sections/about/about_mobile.dart';
+import 'package:devfolio/sections/about/about_tab.dart';
 import 'package:flutter/material.dart';
 
 import '../../responsive/responsive.dart';
@@ -16,7 +17,7 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return const Responsive(
       mobile: AboutMobile(),
-      tablet: AboutMobile(),
+      tablet: AboutTab(),
       desktop: AboutDesktop(),
     );
   }

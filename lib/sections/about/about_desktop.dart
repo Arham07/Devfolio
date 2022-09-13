@@ -170,12 +170,12 @@ class AboutDesktop extends StatelessWidget {
                         ),
                         Container(
                           color: Colors.grey[900]!,
-                          width: width * 0.08,
-                          height: height * 0.002,
+                          width: width * 0.06,
+                          height: height * 0.0025,
                         ),
                         Wrap(
-                            alignment: WrapAlignment.start,
-                            crossAxisAlignment: WrapCrossAlignment.start,
+                            alignment: WrapAlignment.center,
+                            crossAxisAlignment: WrapCrossAlignment.center,
                             children: WorkUtils.logos
                                 .asMap()
                                 .entries
@@ -191,7 +191,7 @@ class AboutDesktop extends StatelessWidget {
                     ),
                   ],
                 ),
-              ), 
+              ),
             ),
             Container(
               width: width < 1230 ? width * 0.05 : width * 0.1,
