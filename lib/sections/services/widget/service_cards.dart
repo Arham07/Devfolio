@@ -57,8 +57,10 @@ class _ServiceCardState extends State<ServiceCard> {
         key: cardKey,
         back: Container(
           width: Responsive.isDesktop(context)
-              ? size.width * 0.20
-              : size.width * 0.58,
+              ? size.width * 0.22
+              : Responsive.isTablet(context)
+                  ? size.width * 0.40
+                  : size.width * 0.58,
           height: Responsive.isDesktop(context)
               ? size.height * 0.35
               : size.height * 0.28,
@@ -88,14 +90,15 @@ class _ServiceCardState extends State<ServiceCard> {
           ),
         ),
         front: Container(
-          // width: size.width * 0.62,
-          // height: size.height * 0.035,
           width: Responsive.isDesktop(context)
-              ? size.width * 0.20
+              ? size.width * 0.22
+              : Responsive.isTablet(context)
+              ? size.width * 0.40
               : size.width * 0.58,
           height: Responsive.isDesktop(context)
               ? size.height * 0.35
               : size.height * 0.28,
+          margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
             color: themeChanger.isDark ? Colors.grey.shade900 : Colors.white,

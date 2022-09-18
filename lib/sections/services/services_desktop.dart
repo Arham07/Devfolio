@@ -36,7 +36,7 @@ class ServiceDesktopState extends State<ServiceDesktop> {
             height: height * 0.01,
           ),
           Wrap(
-            spacing: width * 0.05,
+            spacing: width * 0.04,
             runSpacing: height * 0.05,
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,

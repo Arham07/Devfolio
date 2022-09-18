@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           final themeChanger = Provider.of<ThemeChanger>(context);
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Arham',
+            title: 'Arham Javed',
             themeMode: themeChanger.themeMode,
             theme: theme.themeLight ,
             darkTheme: theme.themeDark,

@@ -7,7 +7,6 @@ import '../../utils/utils.dart';
 import '../../widgets/custom_text_heading.dart';
 import '../../widgets/project_card.dart';
 
-
 class PortfolioDesktop extends StatefulWidget {
   const PortfolioDesktop({Key? key}) : super(key: key);
 
@@ -30,7 +29,9 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
           const CustomSectionSubHeading(
             text: "Here are few samples of my previous work :)\n\n",
           ),
-          SizedBox(height: height*0.01,),
+          SizedBox(
+            height: height * 0.01,
+          ),
           Wrap(
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -40,27 +41,27 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                 .entries
                 .map(
                   (e) => ProjectCard(
-                banner: e.value,
-                projectIcon: ProjectUtils.icons[e.key],
-                projectLink: ProjectUtils.links[e.key],
-                projectTitle: ProjectUtils.titles[e.key],
-                projectDescription: ProjectUtils.description[e.key],
-              ),
-            )
+                    banner: e.value,
+                    projectIcon: ProjectUtils.icons[e.key],
+                    projectLink: ProjectUtils.links[e.key],
+                    projectTitle: ProjectUtils.titles[e.key],
+                    projectDescription: ProjectUtils.description[e.key],
+                  ),
+                )
                 .toList(),
           ),
-          SizedBox(height: height*0.07,),
           SizedBox(
-            height: height*0.06,
-            width: width*0.12,
+            height: height * 0.07,
+          ),
+          SizedBox(
+            height: height * 0.06,
+            width: width * 0.12,
             // icon theme colors and opacity
             child: OutlinedButton(
               onPressed: () => openURL(StaticUtils.gitHub),
               child: const Text(
                 'See More',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold
-                ),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
           )
