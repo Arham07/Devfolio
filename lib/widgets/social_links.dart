@@ -27,36 +27,13 @@ class SocialLinks extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: size.width * 0.005),
               child: IconButton(
                 highlightColor: Colors.white54,
-                splashRadius:
-                MediaQuery.of(context).size.width < 650 &&
-                    MediaQuery.of(context).size.width >= 350
-                    ? size.width * 0.07
-                    : MediaQuery.of(context).size.width < 350
-                    ? size.width * 0.035
-                    :   MediaQuery.of(context).size.width >= 1000 &&
-                    MediaQuery.of(context).size.width >= 650
-                    ? size.width * 0.025
-                    : size.width * 0.03,
-                            icon: Image.asset(
-                  e.value,
-                  color: themeChanger.isDark ? Colors.white : Colors.black,
-                  height: MediaQuery.of(context).size.width < 1000 &&
-                          MediaQuery.of(context).size.width >= 350
-                      ? size.height * 0.2
-                      : MediaQuery.of(context).size.width < 350
-                          ? size.height * 0.03
-                          : MediaQuery.of(context).size.width >= 1000
-                              ? size.height * 0.3
-                              : size.height * 0.3,
-                ),
-                iconSize: MediaQuery.of(context).size.width < 1000 &&
-                        MediaQuery.of(context).size.width >= 350
-                    ? 40
-                    : MediaQuery.of(context).size.width < 350
-                        ? 28
-                        : MediaQuery.of(context).size.width >= 1000
-                            ? 40
-                            : 40,
+                splashRadius: size.width * 0.022,
+                icon: Image.asset(e.value,
+                    color: themeChanger.isDark ? Colors.white : Colors.black,
+                    height: Responsive.isMobile(context)
+                        ? size.height * 0.03
+                        : size.height * 0.3),
+                iconSize: Responsive.isMobile(context) ? 18 : 40,
                 onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],
                 ),

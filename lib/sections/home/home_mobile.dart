@@ -27,7 +27,7 @@ class HomeMobile extends StatelessWidget {
                   duration: const Duration(milliseconds: 800),
                   child: Image.asset(
                     StaticUtils.blackWhitePhoto,
-                    height: size.width>350 ? size.height * 0.70:size.height * 0.45,
+                    height: size.width>450 ? size.height * 0.60:size.height * 0.45,
                   ),
                 ),
               ),
