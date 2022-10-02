@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../constants.dart';
 import '../provider/theme/theme_provider.dart';
-import 'package:devfolio/provider/theme/core_theme.dart' as theme;
-
 import '../responsive/responsive.dart';
 
 class ProjectCard extends StatefulWidget {
