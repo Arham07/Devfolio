@@ -11,7 +11,7 @@ class ProjectUtils {
     "assets/projects/job_icon.jpg",
     "assets/projects/nft_icon.png",
     "assets/projects/googel_ic.png",
-    "assets/projects/news_icon.png",
+    "assets/projects/news_icon.jpg",
     "assets/projects/covid.png",
     "assets/projects/instagram_icon.png",
   ];
