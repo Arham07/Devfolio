@@ -19,7 +19,7 @@ class CommunityIconBtn extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: Responsive.isDesktop(context)
-              ? MediaQuery.of(context).size.width * 0.02
+              ? MediaQuery.of(context).size.width * 0.015
               : Responsive.isTablet(context)
               ? MediaQuery.of(context).size.width * 0.05 : MediaQuery.of(context).size.width * 0.08),
       child: InkWell(

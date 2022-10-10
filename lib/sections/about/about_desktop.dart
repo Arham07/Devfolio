@@ -156,7 +156,7 @@ class AboutDesktop extends StatelessWidget {
                       children: [
                         SizedBox(
                           height: height * 0.06,
-                          width: width * 0.10,
+                          width: width * 0.08,
                           child: OutlinedButton(
                             onPressed: () =>
                                 html.window.open(StaticUtils.resume, 'pdf'),
@@ -172,6 +172,9 @@ class AboutDesktop extends StatelessWidget {
                           color: Colors.grey[900]!,
                           width: width * 0.06,
                           height: height * 0.0025,
+                        ),
+                        SizedBox(
+                          width: width * 0.012,
                         ),
                         Wrap(
                             alignment: WrapAlignment.center,

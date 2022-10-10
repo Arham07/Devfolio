@@ -5,7 +5,7 @@ class ScrollProvider extends ChangeNotifier {
 
   ScrollController get controller => scrollController;
 
-  scroll(int index,BuildContext context) {
+  scroll(int index, BuildContext context) {
     index == 0
         ? scrollController.animateTo(
             MediaQuery.of(context).size.height * 0.0,
